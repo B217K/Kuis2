@@ -11,7 +11,15 @@ public class Kuis07Brian {
         for (int i = 1; i <= n; i++) {
             System.out.print("Usia pengunjung ke-" + (i) + ": ");
             int usia = sc.nextInt();
+            if (usia < 1 || usia > 80){
+                System.out.println("Input tidak valid, ulangi");
+                System.out.print("Usia pengunjung ke-" + (i)+ ": ");
+                usia = sc.nextInt();
+                continue;
+            }
+                
 
+            
             // Harga tiket: usia di bawah 12 tahun Rp 25000, selain itu Rp 40000
             int harga;
             if (usia < 12) {
